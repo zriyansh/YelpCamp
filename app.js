@@ -1,4 +1,3 @@
-
 var path 			= require("path"),
 	flash			= require("connect-flash"),
 	express  		= require("express"),
@@ -41,12 +40,12 @@ passport.serializeUser(User.serializeUser())
 passport.deserializeUser(User.deserializeUser())
 
 
-// middleware to authenticate user on every page(ejs)
+// Middleware to authenticate user on every page(ejs)
 app.use(function(req, res, next){
 	res.locals.currentUser = req.user;
 	res.locals.error = req.flash("error");
 	res.locals.success = req.flash("success");
-	// error and success are just variables
+	// Error and Success are just variables
 	next();
 })
 
@@ -54,7 +53,7 @@ app.use(function(req, res, next){
 app.use("/", indexRoutes)
 app.use("/campgrounds", campgroundRoutes)
 app.use("/campgrounds/:id/comments", commentRoutes)
-// we could use these also to shorten the urls of respective routes
+// We could use these also to shorten the urls of respective routes
 
 // START THE LOCALHOST
 app.listen(3500, function(){
