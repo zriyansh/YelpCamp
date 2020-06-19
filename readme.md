@@ -6,6 +6,6 @@ This website features a project based on *Node.js, Express, MongoDB* and *RESTfu
 
 I look forward to continue adding robustness and more features to it.
 
-All Pull requests are welcomed! and will be merged after verification. 
+All Pull requests are welcomed!
 
 Happy Coding!
